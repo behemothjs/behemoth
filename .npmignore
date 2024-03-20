@@ -1,0 +1,7 @@
+src/**/*.spec.js
+src/**/*.test.js
+src/**/*.spec.mjs
+src/**/*.test.mjs
+Makefile
+template.yaml
+.vscode
