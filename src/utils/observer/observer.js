@@ -20,9 +20,9 @@ export class ObserverClass {
 
 	/**
 	 * ## イベントの送信
-	 * @param {string} channel
-	 * @param {string} topic
-	 * @param {any} payload
+	 * @param {string} channel `*`はワイルドカードとして使用できます。
+	 * @param {string} topic `*`はワイルドカードとして使用できます。
+	 * @param {any?} payload 送信データ
 	 * @returns {void}
 	 */
 	notify(channel, topic, payload) {
@@ -45,9 +45,9 @@ export class ObserverClass {
 
 	/**
 	 * ## イベントの購読
-	 * @param {string} channel
-	 * @param {string} topic
-	 * @param {(event: ObserverEvent) => void} callback
+	 * @param {string} channel `*`はワイルドカードとして使用できます。
+	 * @param {string} topic `*`はワイルドカードとして使用できます。
+	 * @param {(event: ObserverEvent) => void} callback イベント受信時のコールバック
 	 * @returns {Subscription}
 	 */
 	listen(channel, topic, callback) {
@@ -59,8 +59,8 @@ export class ObserverClass {
 
 	/**
 	 * ## リスナーの一括削除
-	 * @param {string} channel
-	 * @param {string} topic
+	 * @param {string} channel `*`はワイルドカードとして使用できます。
+	 * @param {string} topic `*`はワイルドカードとして使用できます。
 	 * @returns {void}
 	 */
 	removeListeners(channel, topic) {
