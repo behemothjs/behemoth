@@ -37,4 +37,4 @@ class ModalClass {
  * ## Modal view switcher
  * Prevents opening more than one modal view.
  */
-export const Modal = new ModalClass();
+export const modal = new ModalClass();

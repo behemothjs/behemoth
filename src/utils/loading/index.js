@@ -45,4 +45,4 @@ class LoadingClass {
 /**
  * ### Loading switcher
  */
-export const Loading = new LoadingClass();
+export const loading = new LoadingClass();
