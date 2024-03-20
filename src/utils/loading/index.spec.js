@@ -1,40 +1,40 @@
 import test from 'ava';
-import {Loading} from './index.js';
+import {loading} from './index.js';
 
-test('Loading', t => {
-	Loading.start('loading1');
-	Loading.start('loading2');
-	Loading.start('loading3');
-	t.true(Loading.check('loading1'));
-	t.true(Loading.check('loading2'));
-	t.true(Loading.check('loading3'));
-	Loading.end('loading1');
-	t.false(Loading.check('loading1'));
-	t.true(Loading.check('loading2'));
-	t.true(Loading.check('loading3'));
-	Loading.end('loading2');
-	t.false(Loading.check('loading1'));
-	t.false(Loading.check('loading2'));
-	t.true(Loading.check('loading3'));
-	Loading.end('loading3');
-	t.false(Loading.check('loading1'));
-	t.false(Loading.check('loading2'));
-	t.false(Loading.check('loading3'));
+test('loading', t => {
+	loading.start('loading1');
+	loading.start('loading2');
+	loading.start('loading3');
+	t.true(loading.check('loading1'));
+	t.true(loading.check('loading2'));
+	t.true(loading.check('loading3'));
+	loading.end('loading1');
+	t.false(loading.check('loading1'));
+	t.true(loading.check('loading2'));
+	t.true(loading.check('loading3'));
+	loading.end('loading2');
+	t.false(loading.check('loading1'));
+	t.false(loading.check('loading2'));
+	t.true(loading.check('loading3'));
+	loading.end('loading3');
+	t.false(loading.check('loading1'));
+	t.false(loading.check('loading2'));
+	t.false(loading.check('loading3'));
 	//
-	Loading.start('loading1');
-	Loading.start('loading2');
-	Loading.start('loading3');
-	t.true(Loading.activeNames.includes('loading1'));
-	t.true(Loading.activeNames.includes('loading2'));
-	t.true(Loading.activeNames.includes('loading3'));
+	loading.start('loading1');
+	loading.start('loading2');
+	loading.start('loading3');
+	t.true(loading.activeNames.includes('loading1'));
+	t.true(loading.activeNames.includes('loading2'));
+	t.true(loading.activeNames.includes('loading3'));
 	//
-	Loading.destory();
-	t.false(Loading.check('loading1'));
-	t.false(Loading.check('loading2'));
-	t.false(Loading.check('loading3'));
+	loading.destory();
+	t.false(loading.check('loading1'));
+	t.false(loading.check('loading2'));
+	t.false(loading.check('loading3'));
 	//
-	Loading.start('loading1');
-	Loading.start('loading1');
-	Loading.start('loading1');
-	t.true(Loading.activeNames.length === 1);
+	loading.start('loading1');
+	loading.start('loading1');
+	loading.start('loading1');
+	t.true(loading.activeNames.length === 1);
 });

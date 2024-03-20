@@ -27,7 +27,7 @@
     "build:tsc": "tsc",
     "test": "run-s test:*",
     "test:lint": "xo",
-    "test:unit": "c8 ava ./__tests__",
+    "test:unit": "c8 ava",
     "cov": "run-s test:unit cov:html cov:lcov cov:open",
     "cov:html": "c8 report --reporter=html",
     "cov:lcov": "c8 report --reporter=lcov",
