@@ -2,6 +2,9 @@
   "name": "@behemothjs/behemoth",
   "version": "0.2.0",
   "description": "Web Tool Kit",
+  "repository": "https://github.com/behemothjs/behemoth",
+  "homepage": "https://github.com/behemothjs/behemoth/blob/main/README.md",
+  "private": false,
   "license": "MIT",
   "author": "Madaka Heri <madakaheri@icloud.com>",
   "keywords": [],
@@ -13,9 +16,6 @@
   ],
   "type": "module",
   "main": "src/index.js",
-  "bin": {
-    "behemoth": "src/cli.js"
-  },
   "scripts": {
     "make": "node ./scripts/make/index.js",
     "build": "run-s -c build:*",
