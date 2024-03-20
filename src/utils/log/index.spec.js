@@ -1,11 +1,11 @@
 import test from 'ava';
-import {Log} from './index.js';
+import {log} from './index.js';
 
 test('Log', t => {
-	Log.configure({logLevel: 'WARN'});
-	Log.log('LOG');
-	Log.info('INFO');
-	Log.warn('WARN');
-	Log.error('ERROR');
+	log.configure({logLevel: 'WARN'});
+	log.log('LOG');
+	log.info('INFO');
+	log.warn('WARN');
+	log.error('ERROR');
 	t.pass();
 });

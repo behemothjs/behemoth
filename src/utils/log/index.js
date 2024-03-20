@@ -1,11 +1,11 @@
-import {Observer} from '../observer/index.js';
+import {observer} from '../observer/index.js';
 import {LogLevelMapToNumber, LogClass} from './log.js';
 
-export const Log = new LogClass();
+export const log = new LogClass();
 
-Observer.listen('LOG', '*', event => {
+observer.listen('LOG', '*', event => {
 	const {topic: eventLogLevel, payload} = event;
-	const {logLevel} = Log.config;
+	const {logLevel} = log.config;
 	const level = LogLevelMapToNumber[logLevel];
 	if (level > LogLevelMapToNumber[eventLogLevel]) {
 		return;

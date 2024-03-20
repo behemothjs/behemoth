@@ -20,9 +20,9 @@ import {ObserverClass} from './observer.js';
  * subscription.remove();
  * ```
  */
-export const Observer = new ObserverClass();
+export const observer = new ObserverClass();
 
-Observer.listen('OBSERVER', 'REMOVE_LISTENER', event => {
+observer.listen('OBSERVER', 'REMOVE_LISTENER', event => {
 	const {payload} = event;
 	const {hash} = payload;
 	delete ObserverClass.listeners[hash];

@@ -1,5 +1,5 @@
 import process from 'node:process';
-import {Observer} from '../observer/index.js';
+import {observer} from '../observer/index.js';
 
 const {LOG_LEVEL = 'INFO'} = process.env;
 
@@ -50,7 +50,7 @@ export class LogClass {
 	 * @returns {void}
 	 */
 	log(message) {
-		Observer.notify('LOG', 'LOG', message);
+		observer.notify('LOG', 'LOG', message);
 	}
 
 	/**
@@ -59,7 +59,7 @@ export class LogClass {
 	 * @returns {void}
 	 */
 	info(message) {
-		Observer.notify('LOG', 'INFO', message);
+		observer.notify('LOG', 'INFO', message);
 	}
 
 	/**
@@ -68,7 +68,7 @@ export class LogClass {
 	 * @returns {void}
 	 */
 	warn(message) {
-		Observer.notify('LOG', 'WARN', message);
+		observer.notify('LOG', 'WARN', message);
 	}
 
 	/**
@@ -77,6 +77,6 @@ export class LogClass {
 	 * @returns {void}
 	 */
 	error(message) {
-		Observer.notify('LOG', 'ERROR', message);
+		observer.notify('LOG', 'ERROR', message);
 	}
 }
