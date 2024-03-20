@@ -41,5 +41,10 @@
   },
   "dependencies": {
     "lodash": "^4.17.21"
+  },
+  "xo": {
+    "rules": {
+      "capitalized-comments": "off"
+    }
   }
 }

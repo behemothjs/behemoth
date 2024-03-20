@@ -1,4 +1,4 @@
-# behemoth
+# Behemoth（ベヒーモス）
 
 Web Tool Kit
 

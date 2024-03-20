@@ -30,7 +30,6 @@ class SchemaConfig extends SchemaAssignConfig {
 
 /**
  * ### Schema Utility
- *
  */
 export class Schema {
 	#config = new SchemaConfig();
