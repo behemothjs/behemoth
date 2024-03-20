@@ -4,17 +4,13 @@
   "description": "Web Tool Kit",
   "repository": {
     "type": "git",
-    "url": "https://github.com/behemothjs/behemoth.git"
+    "url": "git+https://github.com/behemothjs/behemoth.git"
   },
   "homepage": "https://github.com/behemothjs/behemoth/blob/main/README.md",
   "private": false,
   "license": "MIT",
   "author": "Madaka Heri <madakaheri@icloud.com>",
   "keywords": [],
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com/"
-  },
   "engines": {
     "node": ">=18.0.0"
   },
