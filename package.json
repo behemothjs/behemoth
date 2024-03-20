@@ -2,7 +2,10 @@
   "name": "@behemothjs/behemoth",
   "version": "0.2.1",
   "description": "Web Tool Kit",
-  "repository": "https://github.com/behemothjs/behemoth",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/behemothjs/behemoth.git"
+  },
   "homepage": "https://github.com/behemothjs/behemoth/blob/main/README.md",
   "private": false,
   "license": "MIT",
