@@ -1,16 +1,7 @@
-<link href="./readme.css" rel="stylesheet"></link>
-
-<header class="hero">
-  <div class="hero-inner">
-    <div class="title">Behemoth</div>
-    <div class="sub-title">Web Development Engine</div>
-  </div>
-</header>
+# Behemoth（ベヒーモス）
 
 ![node 18.x](https://img.shields.io/badge/node-18.x-0B0)
 [![XO code style](https://shields.io/badge/code_style-5ed9c7?logo=xo&labelColor=gray)](https://github.com/xojs/xo)
-
-# Behemoth（ベヒーモス）
 
 Web制作に必要なシステム構築エンジン
 

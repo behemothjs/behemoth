@@ -4,10 +4,10 @@ Behemoth low level utilities.
 
 ## Features
 
-### Schema
+### [Schema](https://github.com/behemothjs/behemoth/blob/main/packages/behemoth/README.md#schema)
 
 Schema Utility
 
-### Observer
+### [Observer](https://github.com/behemothjs/behemoth/blob/main/packages/behemoth/README.md#observer)
 
 PubSub Module
