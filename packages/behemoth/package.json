@@ -1,18 +1,15 @@
 {
-  "name": "@behemothjs/behemoth-core",
-  "version": "0.0.2",
-  "description": "Behemoth低レイヤーモジュールセット",
-  "author": "Madaka Heri <madakaheri@icloud.com>",
-  "private": false,
+  "name": "@behemothjs/behemoth",
+  "version": "0.3.0",
+  "description": "Web Tool Kit",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/behemothjs/behemoth.git"
   },
-  "bugs": {
-    "url": "https://github.com/behemothjs/behemoth/issues"
-  },
-  "homepage": "https://github.com/behemothjs/behemoth/blob/main/packages/behemoth-core/README.md",
+  "homepage": "https://github.com/behemothjs/behemoth/blob/main/README.md",
+  "private": false,
   "license": "MIT",
+  "author": "Madaka Heri <madakaheri@icloud.com>",
   "keywords": [],
   "engines": {
     "node": ">=18.0.0"
@@ -24,5 +21,9 @@
     "build": "run-s -c build:*",
     "build:clean": "rimraf @types",
     "build:tsc": "tsc"
+  },
+  "dependencies": {
+    "@behemothjs/behemoth-core": "*",
+    "lodash": "^4.17.21"
   }
 }
