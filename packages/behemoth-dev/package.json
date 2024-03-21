@@ -1,7 +1,7 @@
 {
   "name": "@behemothjs/behemoth-dev",
   "version": "0.0.1",
-  "description": "",
+  "description": "このリポジトリの管理CLI",
   "type": "module",
   "main": "index.js",
   "bin": {

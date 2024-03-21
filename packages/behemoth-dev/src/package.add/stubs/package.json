@@ -1,12 +1,12 @@
 {
-  "name": "@behemothjs/behemoth",
-  "version": "0.3.1",
-  "description": "Web Tool Kit",
+  "name": "@behemothjs/NAME_KEBAB_CASE",
+  "version": "0.0.1",
+  "description": "",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/behemothjs/behemoth.git"
   },
-  "homepage": "https://github.com/behemothjs/behemoth/blob/main/README.md",
+  "homepage": "https://github.com/behemothjs/behemoth/blob/main/packages/NAME_KEBAB_CASE/README.md",
   "private": false,
   "license": "MIT",
   "author": "Madaka Heri <madakaheri@icloud.com>",
@@ -22,8 +22,5 @@
     "build:clean": "rimraf @types",
     "build:tsc": "tsc"
   },
-  "dependencies": {
-    "@behemothjs/behemoth-core": "^0.0.2",
-    "lodash": "^4.17.21"
-  }
+  "dependencies": {}
 }

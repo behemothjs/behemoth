@@ -18,8 +18,7 @@
     "packages/*"
   ],
   "type": "module",
-  "main": "src/index.js",
-  "types": "@types/index.d.ts",
+  "main": "index.js",
   "scripts": {
     "make": "node ./scripts/make/index.js",
     "build": "run-s -c build:*",
@@ -45,8 +44,9 @@
   },
   "xo": {
     "ignores": [
-      "coverage/**",
-      "@types/**"
+      "!coverage/**",
+      "!**/@types/**",
+      "!**/stubs/**"
     ],
     "rules": {
       "capitalized-comments": "off"

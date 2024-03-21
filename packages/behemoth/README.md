@@ -10,7 +10,7 @@ npm install @behemothjs/behemoth
 
 ## Features
 
-### Schema
+### 🍄 Schema
 
 モデルクラスなどを作成する際に役立つスキーマ処理ツール。
 
@@ -18,7 +18,12 @@ npm install @behemothjs/behemoth
 import {Schema} from '@behemothjs/behemoth';
 
 const schema = new Schema({
-  ...configuration
+  ...configuration, // (Optional)
+  // [defaults]
+  // allowAdditionalKeys: false,
+  // allowUndefinedKeys: false,
+  // idStrategy: () => crypto.randomUUID(),
+  // timestampStrategy: () => new Date().toISOString(),
 })
 
 class SampleSchema {
@@ -61,7 +66,7 @@ SampleSchema {
 }
 ```
 
-### Observer
+### 🍄 Observer
 
 PubSub Module
 
@@ -80,7 +85,7 @@ const subscription = Observer.listen('channelName', 'topicName', (event) => {
 subscription.remove();
 ```
 
-### Log
+### 🍄 Log
 
 Logging Toool
 

@@ -33,7 +33,7 @@ test('Schema', t => {
 		name: 'Behemoth',
 		description: 'This is web tool kit.',
 	});
-	t.log(schema);
+	// t.log(schema);
 	t.is(schema.name, 'Behemoth');
 	t.is(schema.description, 'This is web tool kit.');
 	t.is(typeof schema.id, 'string');

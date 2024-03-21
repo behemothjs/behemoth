@@ -9,16 +9,6 @@ Web制作に必要なシステム構築エンジン
 
 [./packages](./packages) をワークスペースに設定しています。
 
-### 開発用CLI
-
-このリポジトリの開発時に使用するCLIを [./packages/behemoth-dev](./packages/behemoth-dev) にて作成しています。
-
-#### パッケージの追加
-
-```bash
-dev package add ${packageName}
-```
-
 ## npm script
 
 npm-run-all を入れてありますので、連続的なスクリプトに対応できます。  
@@ -34,6 +24,23 @@ Web制作に必要なシステム構築ツールキット。
 
   behemoth の低レイヤーサブパッケージ。
 
-### [behemoth-dev](./packages/behemoth-dev/README.md)
+## DEV CLI
 
-このリポジトリのメンテナンス用CLIツール。
+このリポジトリのメンテナンス用CLIツールを [./packages/behemoth-dev](./packages/behemoth-dev/README.md) で管理しています。
+
+### コマンド
+
+```dev``` と打てば説明が出てきます。
+
+```bash
+dev <category> <action>
+```
+
+### パッケージの追加
+
+パッケージ名は自動で kebab-case に変換されます。
+
+```bash
+dev package add <package-name>
+```
+
