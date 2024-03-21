@@ -43,10 +43,6 @@
     "typescript": "^5.4.2",
     "xo": "^0.58.0"
   },
-  "dependencies": {
-    "@behemothjs/behemoth-core": "*",
-    "lodash": "^4.17.21"
-  },
   "xo": {
     "ignores": [
       "coverage/**",
