@@ -27,19 +27,19 @@ export class ObserverClass {
      * ## イベントの送信
      * @param {string} [channel='*']
      * @param {string} [topic='*']
-     * @param {any} payload 送信データ
+     * @param {any} [payload] 送信データ
      * @returns {void}
      */
-    notify(channel?: string, topic?: string, payload: any): void;
+    notify(channel?: string, topic?: string, payload?: any): void;
     /**
      * ## イベントの購読
-     * @param {string} [channel='*']
-     * @param {string} [topic='*']
+     * @param {string} channel
+     * @param {string} topic
      * @param {(event: ObserverEvent) => void} callback イベント受信時のコールバック
      * @param {boolean} [isProtected=false]
      * @returns {Subscription}
      */
-    listen(channel?: string, topic?: string, callback: (event: ObserverEvent) => void, isProtected?: boolean): Subscription;
+    listen(channel: string, topic: string, callback: (event: ObserverEvent) => void, isProtected?: boolean): Subscription;
     /**
      * ## リスナーの削除
      * @param {string} hash

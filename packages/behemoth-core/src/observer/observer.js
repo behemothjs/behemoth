@@ -50,10 +50,10 @@ export class ObserverClass {
 	 * ## イベントの送信
 	 * @param {string} [channel='*']
 	 * @param {string} [topic='*']
-	 * @param {any} payload 送信データ
+	 * @param {any} [payload] 送信データ
 	 * @returns {void}
 	 */
-	notify(channel = '*', topic = '*', payload) {
+	notify(channel = '*', topic = '*', payload = null) {
 		const event = new ObserverEvent(channel, topic, payload);
 		const hashes = ObserverClass.searchListeners(channel, topic);
 		for (const hash of hashes) {
@@ -68,13 +68,13 @@ export class ObserverClass {
 
 	/**
 	 * ## イベントの購読
-	 * @param {string} [channel='*']
-	 * @param {string} [topic='*']
+	 * @param {string} channel
+	 * @param {string} topic
 	 * @param {(event: ObserverEvent) => void} callback イベント受信時のコールバック
 	 * @param {boolean} [isProtected=false]
 	 * @returns {Subscription}
 	 */
-	listen(channel = '*', topic = '*', callback, isProtected = false) {
+	listen(channel, topic, callback, isProtected = false) {
 		const subscriptionId = isProtected ? 'PROTECTED' : undefined;
 		const subscription = new Subscription(this, channel, topic, subscriptionId);
 		const {hash} = subscription;

@@ -1,5 +1,5 @@
 import process from 'node:process';
-import {observer} from '../observer/index.js';
+import {observer} from '@behemothjs/behemoth-core';
 
 const {LOG_LEVEL = 'INFO'} = process.env;
 

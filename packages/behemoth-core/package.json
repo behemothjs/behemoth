@@ -1,6 +1,6 @@
 {
   "name": "@behemothjs/behemoth-core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Behemoth低レイヤーモジュールセット",
   "author": "Madaka Heri <madakaheri@icloud.com>",
   "private": false,
@@ -19,6 +19,7 @@
   },
   "type": "module",
   "main": "src/index.js",
+  "types": "@types/index.d.ts",
   "scripts": {
     "build": "run-s -c build:*",
     "build:clean": "rimraf @types",

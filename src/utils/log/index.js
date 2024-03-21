@@ -1,4 +1,4 @@
-import {observer} from '../observer/index.js';
+import {observer} from '@behemothjs/behemoth-core';
 import {LogLevelMapToNumber, LogClass} from './log.js';
 
 export const log = new LogClass();
