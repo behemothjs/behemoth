@@ -10,7 +10,7 @@ import {ObserverClass} from './observer.js';
  * // Subscribe
  * const subscription = Observer.listen(chanel, topic, (event) => {
  * 	console.log(event);
- * }
+ * });
  *
  * // Unsubscribe
  * subscription.remove();

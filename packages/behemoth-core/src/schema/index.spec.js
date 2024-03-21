@@ -2,14 +2,14 @@ import test from 'ava';
 import {Schema} from './index.js';
 
 const schema = new Schema({
-	idStrategy: () => String(Math.random()).slice(2),
-	timestampStrategy: () => new Date().toLocaleString().replaceAll('/', '-'),
+	// idStrategy: () => String(Math.random()).slice(2),
+	// timestampStrategy: () => new Date().toLocaleString().replaceAll('/', '-'),
 });
 
 /**
- * @extends {Schema<TestSchema>}
+ * @extends {Schema<SampleSchema>}
  */
-class TestSchema {
+class SampleSchema {
 	/** @type {string} */
 	id;
 	/** @type {string} */
@@ -18,7 +18,7 @@ class TestSchema {
 	description;
 
 	/**
-	 * @param {TestSchema} data
+	 * @param {SampleSchema} data
 	 */
 	constructor(data) {
 		schema.assign(this, data);
@@ -29,10 +29,14 @@ class TestSchema {
 }
 
 test('Schema', t => {
-	const schema = new TestSchema({
-		// id: '123',
-		name: 'Madaka Heri',
+	const schema = new SampleSchema({
+		name: 'Behemoth',
+		description: 'This is web tool kit.',
 	});
 	t.log(schema);
-	t.is(schema.name, 'Madaka Heri');
+	t.is(schema.name, 'Behemoth');
+	t.is(schema.description, 'This is web tool kit.');
+	t.is(typeof schema.id, 'string');
+	t.is(typeof schema.createdAt, 'string');
+	t.is(typeof schema.updatedAt, 'string');
 });
