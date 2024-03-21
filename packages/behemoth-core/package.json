@@ -1,6 +1,6 @@
 {
   "name": "@behemothjs/behemoth-core",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Behemoth低レイヤーモジュールセット",
   "author": "Madaka Heri <madakaheri@icloud.com>",
   "private": false,

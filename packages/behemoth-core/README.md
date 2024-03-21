@@ -11,3 +11,7 @@ Schema Utility
 ### [Observer](https://github.com/behemothjs/behemoth/blob/main/packages/behemoth/README.md#observer)
 
 PubSub Module
+
+### [Log](https://github.com/behemothjs/behemoth/blob/main/packages/behemoth/README.md#log)
+
+Logging with Observer

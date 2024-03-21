@@ -1,7 +1,7 @@
 import process from 'node:process';
-import {observer} from '@behemothjs/behemoth-core';
+import {observer} from '../observer/index.js';
 
-const {LOG_LEVEL = 'INFO'} = process.env;
+const {LOG_LEVEL = 'LOG'} = process.env;
 
 /**
  * @enum {'LOG'|'INFO'|'WARN'|'ERROR'|'SILENT'} LogLevel
@@ -33,6 +33,39 @@ export class LogClass {
 
 	constructor() {
 		this.configure();
+
+		// Set up observer
+		observer.listen('LOG', '*', event => {
+			/** @type {{topic: LogLevel}} */
+			const {topic: eventLogLevel, payload} = event;
+			const {logLevel} = this.config;
+			const level = LogLevelMapToNumber[logLevel];
+			if (level > LogLevelMapToNumber[eventLogLevel]) {
+				return;
+			}
+		
+			switch (eventLogLevel) {
+				case 'LOG': {
+					console.log(payload);
+					break;
+				}
+
+				case 'INFO': {
+					console.info(payload);
+					break;
+				}
+
+				case 'WARN': {
+					console.warn(payload);
+					break;
+				}
+
+				case 'ERROR': {
+					console.error(payload);
+					break;
+				}
+			}
+		});
 	}
 
 	/**

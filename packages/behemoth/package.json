@@ -1,6 +1,6 @@
 {
   "name": "@behemothjs/behemoth",
-  "version": "0.3.1",
+  "version": "0.4.1",
   "description": "Web Tool Kit",
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
     "build:tsc": "tsc"
   },
   "dependencies": {
-    "@behemothjs/behemoth-core": "^0.0.2",
+    "@behemothjs/behemoth-core": "^0.1.0",
     "lodash": "^4.17.21"
   }
 }
