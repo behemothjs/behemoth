@@ -30,5 +30,14 @@
     "cov:html": "c8 report --reporter=html",
     "cov:lcov": "c8 report --reporter=lcov",
     "cov:open": "open-cli coverage/index.html"
+  },
+  "xo": {
+    "ignores": [
+      "coverage/**",
+      "@types/**"
+    ],
+    "rules": {
+      "capitalized-comments": "off"
+    }
   }
 }

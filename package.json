@@ -46,6 +46,10 @@
     "lodash": "^4.17.21"
   },
   "xo": {
+    "ignores": [
+      "coverage/**",
+      "@types/**"
+    ],
     "rules": {
       "capitalized-comments": "off"
     }
