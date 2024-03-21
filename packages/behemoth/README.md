@@ -1,6 +1,6 @@
 # Behemoth（ベヒーモス）
 
-Web System Tool Kit
+Web制作に必要なシステム構築ツールキット
 
 ## Install
 
