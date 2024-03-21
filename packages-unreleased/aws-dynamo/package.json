@@ -1,0 +1,31 @@
+{
+  "name": "@behemothjs/aws-dynamo",
+  "version": "0.0.1",
+  "description": "AWS Dynamo DB を操作するためのバックエンドツール",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/behemothjs/behemoth.git"
+  },
+  "homepage": "https://github.com/behemothjs/behemoth/blob/main/packages/aws-dynamo/README.md",
+  "private": false,
+  "license": "MIT",
+  "author": "Madaka Heri <madakaheri@icloud.com>",
+  "keywords": [],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "type": "module",
+  "main": "src/index.js",
+  "types": "@types/index.d.ts",
+  "scripts": {
+    "build": "run-s -c build:*",
+    "build:clean": "rimraf @types",
+    "build:tsc": "tsc"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.538.0",
+    "@aws-sdk/client-dynamodb-streams": "^3.535.0",
+    "@aws-sdk/lib-dynamodb": "^3.538.0",
+    "@aws-sdk/util-dynamodb": "^3.538.0"
+  }
+}

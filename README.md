@@ -16,6 +16,8 @@ npm-run-all を入れてありますので、連続的なスクリプトに対�
 
 ## Packages
 
+リリース済みパッケージは [/packages](./packages) で管理しています。
+
 ### [behemoth](./packages/behemoth/README.md)
 
 Web制作に必要なシステム構築ツールキット。
@@ -24,9 +26,21 @@ Web制作に必要なシステム構築ツールキット。
 
   behemoth の低レイヤーサブパッケージ。
 
+## Packages (Unreleased)
+
+リリース前のパッケージは [/packages-unreleased](./packages-unreleased) で管理しています。
+
+### [aws-dynamo](./packages-unreleased/aws-dynamo/README.md)
+
+AWS Dynamo DB 操作キット
+
+### [aws-lambda](./packages-unreleased/aws-lambda/README.md)
+
+AWS Lambda 操作キット
+
 ## DEV CLI
 
-このリポジトリのメンテナンス用CLIツールを [./packages/behemoth-dev](./packages/behemoth-dev/README.md) で管理しています。
+このリポジトリのメンテナンス用CLIツールを [./packages-unreleased/cli-dev](./packages-unreleased/cli-dev/README.md) で管理しています。
 
 ### コマンド
 

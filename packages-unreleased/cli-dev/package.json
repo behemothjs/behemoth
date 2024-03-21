@@ -1,5 +1,5 @@
 {
-  "name": "@behemothjs/behemoth-dev",
+  "name": "cli-dev",
   "version": "0.0.1",
   "description": "このリポジトリの管理CLI",
   "type": "module",
