@@ -4,7 +4,8 @@
   "description": "Web Tool Kit",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/behemothjs/behemoth.git"
+    "url": "git+https://github.com/behemothjs/behemoth.git",
+    "directory": "packages/behemoth"
   },
   "homepage": "https://github.com/behemothjs/behemoth/blob/main/README.md",
   "private": false,
@@ -23,7 +24,6 @@
     "build:tsc": "tsc"
   },
   "dependencies": {
-    "@behemothjs/behemoth-core": "^0.1.0",
     "lodash": "^4.17.21"
   }
 }

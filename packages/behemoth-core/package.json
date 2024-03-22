@@ -1,12 +1,13 @@
 {
   "name": "@behemothjs/behemoth-core",
   "version": "0.1.0",
-  "description": "Behemoth低レイヤーモジュールセット",
+  "description": "",
   "author": "Madaka Heri <madakaheri@icloud.com>",
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/behemothjs/behemoth.git"
+    "url": "git+https://github.com/behemothjs/behemoth.git",
+    "directory": "packages/behemoth-core"
   },
   "bugs": {
     "url": "https://github.com/behemothjs/behemoth/issues"
