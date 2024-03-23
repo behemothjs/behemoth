@@ -9,13 +9,15 @@
 import process from 'node:process';
 import _ from 'lodash';
 import {DynamoDBClient} from '@aws-sdk/client-dynamodb';
-import {DynamoDBDocumentClient, ScanCommand, GetCommand, PutCommand, UpdateCommand, DeleteCommand} from '@aws-sdk/lib-dynamodb';
+import {
+	DynamoDBDocumentClient, ScanCommand, GetCommand, PutCommand, UpdateCommand, DeleteCommand,
+} from '@aws-sdk/lib-dynamodb';
 import {unmarshall} from '@aws-sdk/util-dynamodb';
 import {v4 as uuidv4} from 'uuid';
 import {QueryBuilder} from '../query-builder/index.js';
 
 const {
-	ENV = 'main',
+	// ENV = 'main',
 	REGION = 'ap-northeast-1',
 } = process.env;
 

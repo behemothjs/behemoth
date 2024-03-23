@@ -1,3 +1,5 @@
+/* eslint-disable unicorn/prevent-abbreviations */
+
 import _ from 'lodash';
 import {ScanCommand, QueryCommand} from '@aws-sdk/lib-dynamodb';
 

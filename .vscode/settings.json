@@ -1,0 +1,24 @@
+{
+	"editor.tabSize": 2,
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll": "explicit"
+	},
+	"[javascript][javascriptreact][typescript][typescriptreact]": {
+		"editor.defaultFormatter": "samverschueren.linter-xo"
+	},
+	"[json][jsonc]": {
+		"editor.defaultFormatter": "vscode.json-language-features",
+	},
+	"prettier.enable": false,
+	"xo.enable": true,
+	"xo.format.enable": true,
+	"xo.overrideSeverity": "info",
+	"xo.validate": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact"
+	],
+	"ava-runner.experimentalEnabled": true,
+}
