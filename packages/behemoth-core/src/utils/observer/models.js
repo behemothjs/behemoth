@@ -1,5 +1,7 @@
-import {schema} from '../schema/index.js';
+import {Schema} from '../schema/index.js';
 import * as utils from './utils.js';
+
+const schema = new Schema();
 
 /**
  * 送信イベント
@@ -40,7 +42,7 @@ export class ObserverEvent {
 export class Subscription {
 	/**
 	 * @private
-	 * @type {Observer}
+	 * @type {import('./index.js').Observer}
 	 */
 	#observer;
 
@@ -71,7 +73,7 @@ export class Subscription {
 	}
 
 	/**
-	 * @param {Observer} observer
+	 * @param {import('./index.js').Observer} observer
 	 * @param {string} [chanel='*']
 	 * @param {string} [topic='*']
 	 * @param {undefined | 'PROTECTED'} id

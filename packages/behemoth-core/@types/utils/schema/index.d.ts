@@ -14,7 +14,7 @@ export class SchemaConfig extends SchemaAssignConfig {
  * ### Schema Utility
  */
 export class Schema {
-    static "__#3@#globalConfig": SchemaConfig;
+    static "__#1@#globalConfig": SchemaConfig;
     /**
      * Goobal Configuration
      * @param {Partial<SchemaConfig>} config
@@ -50,7 +50,6 @@ export class Schema {
     autoTimestamp(target: object, timestampKey: string, temporaryTimestampStrategy?: () => string): void;
     #private;
 }
-export const schema: Schema;
 declare class SchemaAssignConfig {
     /**
      * default: false

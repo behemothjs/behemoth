@@ -1,5 +1,7 @@
 import test from 'ava';
-import {schema} from './index.js';
+import {Schema} from './index.js';
+
+const schema = new Schema();
 
 schema.configure({
 	// idStrategy: () => String(Math.random()).slice(2),

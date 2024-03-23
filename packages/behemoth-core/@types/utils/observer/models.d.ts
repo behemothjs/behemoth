@@ -25,12 +25,12 @@ export class ObserverEvent {
  */
 export class Subscription {
     /**
-     * @param {Observer} observer
+     * @param {import('./index.js').Observer} observer
      * @param {string} [chanel='*']
      * @param {string} [topic='*']
      * @param {undefined | 'PROTECTED'} id
      */
-    constructor(observer: Observer, chanel?: string, topic?: string, id?: undefined | 'PROTECTED');
+    constructor(observer: import('./index.js').Observer, chanel?: string, topic?: string, id?: undefined | 'PROTECTED');
     /**
      * @readonly
      * @type {string}

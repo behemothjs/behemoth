@@ -3,7 +3,8 @@
  */
 export const loading: LoadingClass;
 declare class LoadingClass {
-    static store: {};
+    static store: Map<any, any>;
+    /** @type {string[]} */
     get activeNames(): string[];
     /**
      * ### Start loading

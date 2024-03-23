@@ -1,6 +1,6 @@
 {
   "name": "@behemothjs/behemoth",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Web Tool Kit",
   "repository": {
     "type": "git",
@@ -22,13 +22,11 @@
   "main": "index.js",
   "scripts": {
     "make": "node ./scripts/make/index.js",
-    "build": "run-s -c build:*",
-    "build:clean": "rimraf @types",
-    "build:tsc": "tsc",
-    "test": "run-s test:*",
+    "build": "npm run build -ws",
+    "test": "run-s test:* cov",
     "test:lint": "xo",
     "test:unit": "c8 ava",
-    "cov": "run-s test cov:html cov:lcov cov:open",
+    "cov": "run-s cov:html cov:lcov cov:open",
     "cov:html": "c8 report --reporter=html",
     "cov:lcov": "c8 report --reporter=lcov",
     "cov:open": "open-cli coverage/index.html"
@@ -47,9 +45,9 @@
   },
   "xo": {
     "ignores": [
-      "!coverage/**",
-      "!**/@types/**",
-      "!**/stubs/**"
+      "coverage/**",
+      "**/@types/**",
+      "**/stubs/**"
     ],
     "rules": {
       "capitalized-comments": "off"

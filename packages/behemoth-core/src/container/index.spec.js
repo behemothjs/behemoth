@@ -1,5 +1,7 @@
 import test from 'ava';
-import {container} from './index.js';
+import {Container} from './index.js';
+
+const container = new Container();
 
 class Schema {}
 class Observer {}
@@ -9,7 +11,7 @@ container.register('Schema', () => Schema);
 container.register('Observer', () => new Observer());
 container.register('Log', () => new Log());
 
-const {Schema: d1, Observer: d2, Log: d3} = container.use('Schema', 'Observer', 'Log');
+const {Schema: d1, Observer: d2, Log: d3} = await container.use('Schema', 'Observer', 'Log');
 
 class Behemoth {
 	Schema = d1;
@@ -17,7 +19,7 @@ class Behemoth {
 	Log = d3;
 }
 
-test('Dependency injection', async t => {
+test('Dependency Injection', t => {
 	const behemoth = new Behemoth();
 	t.is(behemoth.Schema, Schema);
 	t.true(behemoth.Observer instanceof Observer);

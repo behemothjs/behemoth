@@ -36,20 +36,74 @@ npm install @behemothjs/behemoth
 
 ## Features
 
+### 🍄 App
+
+メインオブジェクトです。
+
+#### Global Configuration for All Modules
+
+```javascript
+import {behemoth as app} from '@behemothjs/behemoth';
+
+app.configure({
+ schema: SchemaConfig,
+ logger: LoggerConfig,
+});
+```
+
+#### Logger alias
+
+```javascript
+app.log(message);
+app.warn(message);
+app.error(message);
+```
+
+#### Observer alias
+
+```javascript
+// Notify
+app.notify(channel, topic, payload);
+
+// Subscribe
+const subscription = app.listen(channel, topic, (event) => {
+ app.log(event);
+});
+
+// Unsubscribe
+subscription.remove();
+```
+
 ### 🍄 Schema
 
 モデルクラスなどを作成する際に役立つスキーマ処理ツール。
 
+#### Global Configuration for Schema Class
+
 ```javascript
 import {Schema} from '@behemothjs/behemoth';
 
-const schema = new Schema({
-  ...configuration, // (Optional)
+Schema.configure({
   // [defaults]
-  // allowAdditionalKeys: false,
-  // allowUndefinedKeys: false,
-  // idStrategy: () => crypto.randomUUID(),
-  // timestampStrategy: () => new Date().toISOString(),
+  allowAdditionalKeys: false,
+  allowUndefinedKeys: false,
+  idStrategy: () => crypto.randomUUID(),
+  timestampStrategy: () => new Date().toISOString(),
+})
+```
+
+#### Example
+
+```javascript
+import {schema} from '@behemothjs/behemoth';
+
+// Temporary Configuration
+schema.configure({
+  // [defaults]
+  allowAdditionalKeys: false,
+  allowUndefinedKeys: false,
+  idStrategy: () => crypto.randomUUID(),
+  timestampStrategy: () => new Date().toISOString(),
 })
 
 class SampleSchema {

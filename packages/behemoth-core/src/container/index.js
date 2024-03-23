@@ -6,7 +6,7 @@ export class Container {
 	/**
 	 * Register a dependency.
 	 * @param {string} name
-	 * @param {function} factory
+	 * @param {() => Promise<void>} factory
 	 */
 	register(name, factory) {
 		this.#dependencies.set(name, factory);
@@ -15,15 +15,15 @@ export class Container {
 	/**
 	 * Get a dependency.
 	 * @param {string} name
-	 * @returns {any}
+	 * @returns {Promise<any>}
 	 */
-	get(name) {
+	async get(name) {
 		if (!this.#dependencies.has(name)) {
 			throw new Error(`Dependency "${name}" not registered.`);
 		}
 
 		if (!this.#singletons.has(name)) {
-			this.#singletons.set(name, this.#dependencies.get(name)());
+			this.#singletons.set(name, await this.#dependencies.get(name)());
 		}
 
 		return this.#singletons.get(name);
@@ -31,16 +31,19 @@ export class Container {
 
 	/**
 	 * Use multiple dependencies.
-	 * @param {...string} names
-	 * @returns {Record<string, any}
+	 * @param {string[]} names
+	 * @returns {Promise<Record<string, any>>}
 	 */
-	use(...names) {
-		const dependencies = new Map();
-		for (const name of names) {
-			dependencies.set(name, this.get(name));
+	async use(...names) {
+		if (names.length === 0) {
+			names = [...this.#dependencies.keys()];
 		}
+
+		const dependencies = new Map();
+		await Promise.all(names.map(async name => {
+			dependencies.set(name, await this.get(name));
+		}));
+
 		return Object.fromEntries(dependencies);
 	}
 }
-
-export const container = new Container();

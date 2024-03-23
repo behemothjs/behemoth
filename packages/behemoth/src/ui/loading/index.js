@@ -2,8 +2,9 @@
 class LoadingClass {
 	static store = new Map();
 
+	/** @type {string[]} */
 	get activeNames() {
-		return LoadingClass.store.keys();
+		return [...LoadingClass.store.keys()];
 	}
 
 	/**

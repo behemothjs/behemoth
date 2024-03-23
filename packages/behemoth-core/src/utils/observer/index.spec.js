@@ -1,5 +1,7 @@
 import test from 'ava';
-import {observer} from './index.js';
+import {Observer} from './index.js';
+
+const observer = new Observer();
 
 test('observer', t => {
 	let data = null;

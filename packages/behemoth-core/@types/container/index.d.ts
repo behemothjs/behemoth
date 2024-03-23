@@ -2,22 +2,21 @@ export class Container {
     /**
      * Register a dependency.
      * @param {string} name
-     * @param {function} factory
+     * @param {() => Promise<void>} factory
      */
-    register(name: string, factory: Function): void;
+    register(name: string, factory: () => Promise<void>): void;
     /**
      * Get a dependency.
      * @param {string} name
-     * @returns {any}
+     * @returns {Promise<any>}
      */
-    get(name: string): any;
+    get(name: string): Promise<any>;
     /**
      * Use multiple dependencies.
-     * @param {...string} names
-     * @returns {Record<string, any}
+     * @param {string[]} names
+     * @returns {Promise<Record<string, any>>}
      */
-    use(...names: string[]): Record<string, any>;
+    use(...names: string[]): Promise<Record<string, any>>;
     #private;
 }
-export const container: Container;
 //# sourceMappingURL=index.d.ts.map

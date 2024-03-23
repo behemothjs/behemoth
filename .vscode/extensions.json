@@ -1,6 +1,6 @@
 {
 	"recommendations": [
-		"samverschueren.linter-xo",
-		"sculpt0r.vsc-ava-test-runner"
+		"sculpt0r.vsc-ava-test-runner",
+		"samverschueren.linter-xo"
 	]
 }

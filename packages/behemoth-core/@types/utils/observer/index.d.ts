@@ -3,10 +3,10 @@
  * @example
  * ```javascript
  * // Notify
- * Observer.notify(chanel, topic, payload);
+ * observer.notify(chanel, topic, payload);
  *
  * // Subscribe
- * const subscription = Observer.listen(chanel, topic, (event) => {
+ * const subscription = observer.listen(chanel, topic, (event) => {
  * 	console.log(event);
  * });
  *
@@ -14,8 +14,7 @@
  * subscription.remove();
  * ```
  */
-export const observer: Observer;
-declare class Observer {
+export class Observer {
     /** @type {Record<string, (event: ObserverEvent) => void>} */
     static listener: Record<string, (event: ObserverEvent) => void>;
     /**
@@ -73,5 +72,4 @@ declare class Observer {
 }
 import { ObserverEvent } from './models.js';
 import { Subscription } from './models.js';
-export {};
 //# sourceMappingURL=index.d.ts.map

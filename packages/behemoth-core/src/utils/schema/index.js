@@ -116,5 +116,3 @@ export class Schema {
 		target[timestampKey] ||= timestampStrategy();
 	}
 }
-
-export const schema = new Schema();
