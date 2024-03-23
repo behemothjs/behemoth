@@ -1,10 +1,12 @@
 # @behemothjs/behemoth-core
 
-![status](https://img.shields.io/badge/status-Alpha-F00)
+![stability](https://img.shields.io/badge/stability-Alpha-F00)
 ![node 18.x](https://img.shields.io/badge/node-18.x-0B0)
 [![XO code style](https://shields.io/badge/code_style-5ed9c7?logo=xo&labelColor=gray)](https://github.com/xojs/xo)
 
 Behemoth core utilities.
+
+👉 **[[main] Behemoth](https://github.com/behemothjs/behemoth/blob/main/packages/behemoth/README.md)**
 
 ## 🚫 Notice
 

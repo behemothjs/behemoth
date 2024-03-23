@@ -1,18 +1,18 @@
-# Behemoth
+# Behemoth（ベヒーモス）
 
 ![stability](https://img.shields.io/badge/stability-Alpha-F00)
 ![node 18.x](https://img.shields.io/badge/node-18.x-0B0)
 [![XO code style](https://shields.io/badge/code_style-5ed9c7?logo=xo&labelColor=gray)](https://github.com/xojs/xo)
 
-An engine for building systems necessary for web production.
+Web制作に必要なシステム構築エンジン
 
 ## Document Translation
 
-[🇯🇵 日本語](./README_ja.md)
+[🇺🇸 English](./README.md)
 
 ## 🚫 Project stability is "Alpha"
 
-This project is currently under development. Please refrain from using it until release as it may undergo specification changes.
+このプロジェクトは現在開発中です。仕様変更を伴うためリリースまでご利用はお控え下さい。
 
 ## Install
 
@@ -24,7 +24,7 @@ npm install @behemothjs/behemoth
 
 ### 🍄 App
 
-The main object.
+メインオブジェクトです。
 
 #### Global Configuration for All Modules
 
@@ -62,7 +62,7 @@ subscription.remove();
 
 ### 🍄 Schema
 
-A schema processing tool useful for creating model classes, etc.
+モデルクラスなどを作成する際に役立つスキーマ処理ツール。
 
 #### Global Configuration for Schema Class
 
@@ -101,7 +101,7 @@ class SampleSchema {
    * @param {SampleSchema} data
    */
   constructor(data) {
-    // Before: Input undefined key -> Throw Error
+    // Before: Input undefind key -> Throw Error
     // After:  not set keys       -> Set undefined to null
     schema.assign(this, data);
 
@@ -153,12 +153,12 @@ subscription.remove();
 
 ### 🍄 Log
 
-Logging Tool
+Logging Toool
 
 ```javascript
 import {log} from '@behemothjs/behemoth';
 
-// Configuration or Set environment variable: LOG_LEVEL
+// Configuration or Set environment valiable: LOG_LEVEL
 log.configure({logLevel: 'WARN'}); // LOG / INFO / WARN / ERROR / SILENT
 
 log.log('LOG');     // console.log('LOG')
@@ -167,13 +167,13 @@ log.warn('WARN');   // console.warn('WARN')
 log.error('ERROR'); // console.error('ERROR')
 ```
 
-Since this log is output via Observer, it is effective for streaming log collection processes.
+このログは Observer を介して出力されるため、ログ収集のストリーミング処理に有効です。
 
 ```javascript
 const channel = 'Log';
-const topic = 'ERROR'; // <-- "*" (wildcard) can be used.
-
-observer.listen(channel, topic, async event => {
+const topic = 'ERROR'; // "*"(ワイルドカード)が利用できます。
+observer.listen('Log', 'ERROR', async event => {
   const {payload} = event;
   await otherStreamingApi.push(payload);
 });
+```

@@ -1,12 +1,17 @@
-# Behemoth（ベヒーモス）
+# Behemoth
 
-![status](https://img.shields.io/badge/status-Alpha-F00)
+![stability](https://img.shields.io/badge/stability-Alpha-F00)
 ![node 18.x](https://img.shields.io/badge/node-18.x-0B0)
 [![XO code style](https://shields.io/badge/code_style-5ed9c7?logo=xo&labelColor=gray)](https://github.com/xojs/xo)
 
-Web制作に必要なシステム構築エンジン
+Documentation for Contoributers.  
+Main Document → [Behemoth](./packages/behemoth/README.md)
 
-## 🚫 Notice
+## Document Translation
+
+[🇯🇵 日本語](./README_ja.md)
+
+## 🚫 Project stability is "Alpha"
 
 ```ja
 このプロジェクトは現在開発中です。仕様変更を伴うためリリースまでご利用はお控え下さい。
@@ -28,56 +33,61 @@ Este proyecto está actualmente en desarrollo. Por favor, absténgase de usarlo 
 Ce projet est actuellement en cours de développement. Veuillez vous abstenir de l'utiliser jusqu'à sa sortie en raison de modifications des spécifications.
 ```
 
-## npm workspaces
+## Install
 
-[./packages](./packages) をワークスペースに設定しています。
+```bash
+npm install @behemothjs/behemoth
+```
+
+## npm workspaces [ monorepo ]
+
+[./packages](./packages) is set up as a workspace.
 
 ## npm script
 
-npm-run-all を入れてありますので、連続的なスクリプトに対応できます。  
-複雑なスクリプトを実行したい場合は [./scripts](./scripts) にファイルを作成して実行します。
+`npm-run-all` is included, allowing for sequential script execution.
+For complex scripts, create a file in [./scripts](./scripts) and execute it.
 
 ## Packages
 
-リリース済みパッケージは [/packages](./packages) で管理しています。
+Released packages are managed in [/packages](./packages).
 
-### [behemoth](./packages/behemoth/README.md)
+### [[main] behemoth](./packages/behemoth/README.md)
 
-Web制作に必要なシステム構築ツールキット。
+A toolkit for building systems necessary for web production.
 
 - ### [behemoth-core](./packages/behemoth-core/README.md)
 
-  behemoth の低レイヤーサブパッケージ。
+  A low-layer subpackage of behemoth.
 
 ## Packages (Unreleased)
 
-リリース前のパッケージは [/packages-unreleased](./packages-unreleased) で管理しています。
+Packages that are yet to be released are managed in [/packages-unreleased](./packages-unreleased).
 
 ### [aws-dynamo](./packages-unreleased/aws-dynamo/README.md)
 
-AWS Dynamo DB 操作キット
+An AWS Dynamo DB operation kit.
 
 ### [aws-lambda](./packages-unreleased/aws-lambda/README.md)
 
-AWS Lambda 操作キット
+An AWS Lambda operation kit.
 
 ## DEV CLI
 
-このリポジトリのメンテナンス用CLIツールを [./packages-unreleased/cli-dev](./packages-unreleased/cli-dev/README.md) で管理しています。
+A CLI tool for maintaining this repository is managed at [./packages-unreleased/cli-dev](./packages-unreleased/cli-dev/README.md).
 
-### コマンド
+### Commands
 
-```dev``` と打てば説明が出てきます。
+Type `dev` to see the instructions.
 
 ```bash
 dev <category> <action>
 ```
 
-### パッケージの追加
+### Adding a Package
 
-パッケージ名は自動で kebab-case に変換されます。
+Package names are automatically converted to kebab-case.
 
 ```bash
 dev package add <package-name>
 ```
-
