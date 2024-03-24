@@ -11,7 +11,15 @@
   "private": false,
   "license": "MIT",
   "author": "Madaka Heri <madakaheri@icloud.com>",
-  "keywords": [],
+  "keywords": [
+    "behemothjs",
+    "behemoth",
+    "web",
+    "utility",
+    "toolkit",
+    "framework",
+    "engine"
+  ],
   "engines": {
     "node": ">=18.0.0"
   },

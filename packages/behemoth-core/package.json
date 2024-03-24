@@ -1,7 +1,7 @@
 {
   "name": "@behemothjs/behemoth-core",
   "version": "0.2.1",
-  "description": "",
+  "description": "Behemoth cora utilities.",
   "author": "Madaka Heri <madakaheri@icloud.com>",
   "private": false,
   "repository": {
@@ -14,7 +14,15 @@
   },
   "homepage": "https://github.com/behemothjs/behemoth/blob/main/packages/behemoth-core/README.md",
   "license": "MIT",
-  "keywords": [],
+  "keywords": [
+    "behemothjs",
+    "behemoth",
+    "web",
+    "utility",
+    "toolkit",
+    "framework",
+    "engine"
+  ],
   "engines": {
     "node": ">=18.0.0"
   },

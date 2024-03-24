@@ -4,7 +4,8 @@
   "description": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/behemothjs/behemoth.git"
+    "url": "git+https://github.com/behemothjs/behemoth.git",
+    "directory": "packages/NAME_KEBAB_CASE"
   },
   "homepage": "https://github.com/behemothjs/behemoth/blob/main/packages/NAME_KEBAB_CASE/README.md",
   "private": false,

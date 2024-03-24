@@ -10,7 +10,7 @@ const __dirname = path.dirname(new URL(import.meta.url).pathname);
 export async function run(projectPath, options) {
 	const [name] = options;
 	const nameKebabCase = _.kebabCase(name);
-	const outputPath = path.join(projectPath, 'packages', nameKebabCase);
+	const outputPath = path.join(projectPath, 'packages-unreleased', nameKebabCase);
 	const stubPath = path.join(__dirname, 'stubs');
 
 	try {
@@ -38,5 +38,5 @@ export async function run(projectPath, options) {
 		fs.copyFile(`${stubPath}/tsconfig.json`, `${outputPath}/tsconfig.json`),
 	]);
 
-	console.info('\n', `✅ Create Successfully: ./packages/${nameKebabCase}`, '\n');
+	console.info('\n', `✅ Create Successfully: ./packages-unreleased/${nameKebabCase}`, '\n');
 }
