@@ -1,0 +1,32 @@
+{
+  "name": "@behemothjs/static-data",
+  "version": "0.0.0",
+  "description": "Static JSON Data Bulder",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/behemothjs/behemoth.git",
+    "directory": "packages/static-data"
+  },
+  "homepage": "https://github.com/behemothjs/behemoth/blob/main/packages/static-data/README.md",
+  "private": false,
+  "license": "MIT",
+  "author": "Madaka Heri <madakaheri@icloud.com>",
+  "keywords": [
+    "behemothjs",
+    "behemoth",
+    "static",
+    "data",
+    "json"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "type": "module",
+  "main": "src/index.js",
+  "types": "@types/index.d.ts",
+  "scripts": {
+    "build": "run-s -c build:*",
+    "build:clean": "rimraf @types",
+    "build:tsc": "tsc"
+  }
+}
