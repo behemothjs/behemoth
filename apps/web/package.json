@@ -1,0 +1,38 @@
+{
+  "name": "@behemothjs/web",
+  "version": "0.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/behemothjs/behemoth.git",
+    "directory": "apps/web"
+  },
+  "homepage": "https://github.com/behemothjs/behemoth/blob/main/apps/web/README.md",
+  "private": false,
+  "license": "MIT",
+  "author": "Madaka Heri <madakaheri@icloud.com>",
+  "keywords": [],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "type": "module",
+  "main": "src/index.js",
+  "types": "@types/index.d.ts",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "xo && ava",
+    "build": "run-s -c build:*",
+    "build:clean": "rimraf @types",
+    "build:tsc": "tsc"
+  },
+  "devDependencies": {
+    "ava": "^6.1.2",
+    "c8": "^9.1.0",
+    "xo": "^0.58.0"
+  },
+  "dependencies": {
+    "@behemothjs/behemoth-core": "^0.2.1"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "@behemothjs/cli",
+  "version": "0.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/behemothjs/behemoth.git",
+    "directory": "packages/cli"
+  },
+  "homepage": "https://github.com/behemothjs/behemoth/blob/main/packages/cli/README.md",
+  "private": false,
+  "license": "MIT",
+  "author": "Madaka Heri <madakaheri@icloud.com>",
+  "keywords": [],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "type": "module",
+  "main": "src/index.js",
+  "types": "@types/index.d.ts",
+  "bin": {
+    "behemoth": "cli.js"
+  },
+  "scripts": {
+    "build": "run-s -c build:*",
+    "build:clean": "rimraf @types",
+    "build:tsc": "tsc"
+  },
+  "dependencies": {
+    "execa": "^8.0.1",
+    "open-cli": "^8.0.0"
+  }
+}
