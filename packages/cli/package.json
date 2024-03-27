@@ -1,6 +1,6 @@
 {
   "name": "@behemothjs/cli",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "",
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
     "build:tsc": "tsc"
   },
   "dependencies": {
+    "@inquirer/prompts": "^4.3.0",
     "execa": "^8.0.1",
     "open-cli": "^8.0.0"
   }

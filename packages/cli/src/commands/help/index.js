@@ -7,10 +7,8 @@ export const stub = `
 |                         |
 +-------------------------+
 
-Install:
-
-- npm install --global @behemothjs/cli
-
+Install:   npm install --global @behemothjs/cli
+Uninstall: npm uninstall --global @behemothjs/cli
 
 Commands:
 
@@ -42,7 +40,7 @@ Commands:
 `;
 
 /**
- * @param {import('../../index.js').CommandOption} option
+ * @param {import('../../types.js').CommandOption} option
  */
 export async function run(option) {
 	const {version} = JSON.parse(await fs.readFile(`${option.cliPath}/package.json`, 'utf8'));

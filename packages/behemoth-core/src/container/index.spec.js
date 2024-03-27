@@ -26,3 +26,4 @@ test('Dependency Injection', t => {
 	t.true(behemoth.Log instanceof Log);
 	t.pass();
 });
+

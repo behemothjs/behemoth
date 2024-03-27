@@ -1,18 +1,5 @@
-import path from 'node:path';
 import fs from 'node:fs/promises';
-import process from 'node:process';
-
-export class CommandOption {
-	constructor() {
-		const [_node, _cliFilePath, action = 'help', ...options] = process.argv;
-		const __dirname = path.dirname(new URL(import.meta.url).pathname);
-		this.cwd = process.cwd();
-		this.cliPath = path.resolve(__dirname, '..');
-		this.action = action;
-		this.options = options;
-		Object.freeze(this);
-	}
-}
+import {CommandOption} from './types.js';
 
 export async function main() {
 	try {
@@ -21,11 +8,11 @@ export async function main() {
 		let _action = action.replaceAll('-', '');
 		const actions = await fs.readdir(`${cliPath}/src/commands`);
 
-		if (action === 'v') {
+		if (action === '-v') {
 			_action = 'version';
 		}
 
-		if (action === 'h' || !actions.includes(_action)) {
+		if (action === '-h' || action === '--help' || !actions.includes(_action)) {
 			_action = 'help';
 		}
 
